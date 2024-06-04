@@ -3,7 +3,8 @@ default:
 
 #Download Raven only
 get_raven_data:
-	wget -O raven.txt "https://www.gutenberg.org/cache/epub/17192/pg17192.txt"
+	mkdir -p works
+	wget -O works/raven.txt "https://www.gutenberg.org/cache/epub/17192/pg17192.txt"
 
 raven_line_count raven.txt:
 	cat raven.txt.txt | wc -l
@@ -20,10 +21,10 @@ raven_counts raven.txt:
 	cat raven.txt | grep -e "raven|Raven" | wc -l
 
 get_texts:
-	#run chmod 777 first
+	#already ran chmod 777
 	python download_books.py
 
-#Total all files
+#Total all files -- including the raven
 total_lines poems/:
 	bat poems/*.txt | wc -l
 

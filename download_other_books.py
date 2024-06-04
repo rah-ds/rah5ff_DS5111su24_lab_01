@@ -9,4 +9,4 @@ os.system(f"mkdir -p works/")
 
 for id in book_ids:
     print(f"running {id}")
-    os.system(f'wget -O "works/{id}.txt "https://www.gutenberg.org/cache/epub/{id}/pg{id}.txt"')
+    os.system(f'wget -O "works/{id}.txt" "https://www.gutenberg.org/cache/epub/{id}/pg{id}.txt"')

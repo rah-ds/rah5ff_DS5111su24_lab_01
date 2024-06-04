@@ -1,0 +1,3 @@
+default:
+	cat @make
+

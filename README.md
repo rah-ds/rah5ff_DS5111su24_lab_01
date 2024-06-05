@@ -3,7 +3,7 @@
 This lab uses project [Gutenburg](https://www.gutenberg.org/ebooks/1065)
 to load and analyze books/works that no longer have Copyrights. 
 
-Being at UVa, we naturally care about Edgar Allan Poe.
+Being at UVa, we naturally care about Edgar Allan Poe :).
 
 To download and analyze some of his works, we will use a makefile, which runs on:
 1) The famous `Raven` Poem

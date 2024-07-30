@@ -44,3 +44,15 @@ the argument calls to `make` are
   * `clean_text` - should take a string, and should return all lowercase words, and throw out any punctuation
   * `tokenize` - should take a string and return a python list, where each item is a word in the file
   * `count_words` - should take a string and return a dictionary with the words as keys, and their counts as value
+
+# Lab 3 Test Functions
+
+we are going to limit what can change here
+files under consideration:
+
+> line count - name
+* 17192 - `The Raven`
+* 932 - `Fall of the House of Usher`
+* 1063 - `Cask of Amontillado`
+* 10031 - `The Poems`
+* 14082 - `And Le Corbeau`

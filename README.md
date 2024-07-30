@@ -40,3 +40,7 @@ the argument calls to `make` are
 * `total_words`
 * `clean_up`
 
+# Lab 2
+  * `clean_text` - should take a string, and should return all lowercase words, and throw out any punctuation
+  * `tokenize` - should take a string and return a python list, where each item is a word in the file
+  * `count_words` - should take a string and return a dictionary with the words as keys, and their counts as value

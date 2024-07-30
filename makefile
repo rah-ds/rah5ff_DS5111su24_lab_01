@@ -40,3 +40,6 @@ total_words:
 clean_up:
 	#delete the data if you'd like
 	rm -rf works/
+
+load_py_env:
+	python3 -m venv tokenizer_env; pip install --upgrade pip; pip install -r requirements.txt

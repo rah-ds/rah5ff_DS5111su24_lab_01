@@ -11,7 +11,7 @@ def clean_text(txt: str) -> str:
     return clean_text
 
 
-def tokenize(txt: str) -> list:
+def tokenizer(txt: str) -> list:
     """this takes a string and splits it into a list of words."""
     assert isinstance(txt, str), "the input must be a string"
     token_list = txt.split(" ")
@@ -23,7 +23,7 @@ def count_words(txt: str) -> dict:
     """Counts the words in a string, by cleaning the string
     and creating a frequency dictionary of the words."""
     assert isinstance(txt, str), "the input must be a string."
-    count_dict = dict(Counter(tokenize(clean_text(txt))))
+    count_dict = dict(Counter(tokenizer(clean_text(txt))))
     assert isinstance(count_dict, dict), "output must be a dictionary"
     return count_dict
 

@@ -47,6 +47,12 @@ the argument calls to `make` are
 
 # Lab 3 Test Functions
 
+Tests are written using a
+* Given
+* When
+* Then
+framework
+
 we are going to limit what can change here
 files under consideration:
 

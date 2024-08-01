@@ -42,4 +42,4 @@ clean_up:
 	rm -rf works/
 
 load_py_env:
-	python3 -m venv env; pip install --upgrade pip; pip install -r requirements.txt
+	python3 -m venv env; pip install --upgrade pip; source env/bin/activate; pip install -r requirements.txt;

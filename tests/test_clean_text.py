@@ -2,7 +2,7 @@ import os
 import sys
 
 sys.path.insert(0, os.path.abspath("src/"))
-from tokenizer import clean_text #noqa
+from tokenize import clean_text #noqa
 
 
 sample_text = "But the Raven, sitting lonely on the placid bust, spoke only That one word, as if his soul in that one word he did outpour."

@@ -1,2 +1,5 @@
-#no texts should be committed to the repo
+# no texts should be committed to the repo
 *.txt
+
+# we shouldn't have the env file committed
+.env

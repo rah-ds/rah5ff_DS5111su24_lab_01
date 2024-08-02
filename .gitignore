@@ -1,0 +1,8 @@
+# no texts should be committed to the repo
+*.txt
+
+# we shouldn't have the env file committed
+.env
+
+# don't want the test results
+tests/__pycache__/*

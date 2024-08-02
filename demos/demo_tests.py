@@ -1,3 +1,8 @@
+"""
+demo tests: given as examples by instructor.
+"""
+
+
 def tokenize(somestr):
     return len(somestr.split())
 

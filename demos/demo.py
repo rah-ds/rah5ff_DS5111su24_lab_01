@@ -1,4 +1,4 @@
-from M_2.rah5ff_DS5111su24_lab_01.src.tokenize import count_words
+from M_2.rah5ff_DS5111su24_lab_01.src.tokenizer import count_words
 
 dead_mouse_str = "you want the longest road to nowhere. Giddy up and go, and your heart is in the flow."
 print(count_words(dead_mouse_str))

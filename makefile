@@ -41,5 +41,10 @@ clean_up:
 	#delete the data if you'd like
 	rm -rf works/
 
-load_py_env:
-	python3 -m venv env; pip install --upgrade pip; source env/bin/activate; pip install -r requirements.txt;
+#tear down if exists; rebuild env
+venv:
+	rm -rf env
+	python3 -m venv env
+	pip install --upgrade pip
+	source env/bin/activate; pip install -r requirements.txt
+

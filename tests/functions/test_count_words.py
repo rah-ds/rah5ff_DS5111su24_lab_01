@@ -3,7 +3,7 @@ import pytest
 import sys
 
 sys.path.insert(0, os.path.abspath('src/'))
-from raven_tokenizer import count_words
+from tokenizer import count_words
 
 
 def test_count_words_count():
@@ -32,4 +32,4 @@ def test_no_extra_words():
 
     assert "Raven" not in count_dict, "we shouldn't see an upper case and in this in output"
 
-def check
+# def check

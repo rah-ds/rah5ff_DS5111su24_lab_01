@@ -3,8 +3,8 @@ import sys
 import pytest
 
 sys.path.insert(0, os.path.abspath('src/'))
-from raven_tokenizer import clean_text, tokenizer
-
+from tokenizer import clean_text, tokenizer
+from utils import converts_book_to_string
 
 def test_remove_punctuation():
     """
@@ -18,6 +18,11 @@ def test_remove_punctuation():
 
     assert "." not in cleaned_string, "the '.' character wasn't cleaned in the string"
     assert "," not in cleaned_string, "the "" character wasn't cleaned in the string"
+
+@pytest.mark.parametrize("file_path", ["~rah5ff_DS5111su24_lab_01/works/testing_texts/The_Raven17192.txt"])
+def test_on_file_remove_punctuation(file_path):
+    print(file_path)
+
 
 
 def test_lower_string():

@@ -1,11 +1,16 @@
 ## Lab 1 
 
+Developing a well-tested and robust tokenizer library. 
+
+A quick start demo can be found in `demo\demos.ipynb`
+
+
 <!-- TOC -->
   * [Lab 1](#lab-1-)
-    * [Week 1 - Makefiles, Linux, Bash](#week-1---makefiles-linux-bash)
+    * [Week 1—Makefiles, Linux, Bash](#week-1makefiles-linux-bash)
         * [The 10 works we run are:](#the-10-works-we-run-are)
     * [Week 3—Defining Functions](#week-3defining-functions)
-    * [Week 4 - Testing Functions](#week-4---testing-functions)
+    * [Week 4—Testing Functions](#week-4testing-functions)
 <!-- TOC -->
 
 

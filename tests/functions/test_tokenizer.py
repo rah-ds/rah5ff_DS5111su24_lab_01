@@ -4,7 +4,7 @@ import pytest
 
 sys.path.insert(0, os.path.abspath('src/'))
 
-from raven_tokenizer import clean_text, tokenizer, count_words
+from tokenizer import clean_text, tokenizer, count_words
 
 
 def test_tokenizer_output_is_list():

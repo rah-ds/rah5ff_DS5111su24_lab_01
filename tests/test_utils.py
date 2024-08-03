@@ -8,7 +8,7 @@ import tempfile
 
 sys.path.insert(0, os.path.abspath('src/'))
 
-from raven_tokenizer import clean_text, tokenizer, count_words
+# from tokenizer import clean_text, tokenizer, count_words
 
 
 def test_platform_compatibility():
@@ -19,8 +19,8 @@ def test_platform_compatibility():
 
     currently only Windows, Ubuntu, and Mac are supported.
     """
-    supported_os_ = ["windows", "macos", "ubuntu"]
-    current_os = clean_text(platform.platform())
+    supported_os_ = ["Windows", "Darwin", "Ubuntu"]
+    current_os = platform.system()
 
     assert current_os in supported_os_, f"given os {current_os} only {supported_os_} supported"
 

@@ -5,9 +5,17 @@ This project uses `pytest` for its parametrization, active community, and clear 
 ## How to Run
 
 ```bash
-python3 pytest tests
+#from project root
+python3 pytest tests --verbose
 
 ```
+
+## Data Coverage
+
+1) Sample line of English Text
+2) The text of the Raven
+3) English Sample of Edgar Allan Poe Texts
+4) French Sample from `Le Corbeau`
 ## Structure
 
 ```bash
@@ -19,15 +27,7 @@ python3 pytest tests
 └── test_utils.py
 ```
 
-### Data Coverage
-
-1) a line of English Text
-2) A whole English Text
-3) a sample of texts
-4) French results
-
-
-### Tested Functions
+### Functions
 * `test_clean_text` - removes punctuation and returns a lowercase string.
 * `test_count_words` - counts the words in a string.
 * `test_tokenizer` - takes a string and returns a list.
@@ -42,3 +42,6 @@ python3 pytest tests
   * **written language compatibility** future support for Japanese, Chinese, and Korean
   
   * **Sanity checks** output vs stable and expected `wc` tool
+
+### Integration Tests
+

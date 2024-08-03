@@ -1,10 +1,8 @@
 import os
-import subprocess
-import sys
 import pytest
 import platform
+import sys
 
-import tempfile
 
 sys.path.insert(0, os.path.abspath('src/'))
 
@@ -58,7 +56,7 @@ def test_clean_text_japanese():
 def test_wc_vs_counter():
     """
     GIVEN: our tokenizer
-    WHEN: we compare it vs word counter
+    WHEN: we compare it vs. word counter
     THEN: are the two giving the same answer.
 
     wc has a lot of support, and our tokenizer should
@@ -68,4 +66,4 @@ def test_wc_vs_counter():
     # subprocess.check_output(["wc" "-w", "file"])
     # os.sys(f"echo ${sample_text} | wc -w")
     # echo
-    # "$tsetat adaf adfa " | wc - w
+    # "$tfile " | wc - w

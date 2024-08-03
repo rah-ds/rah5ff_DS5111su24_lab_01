@@ -6,3 +6,10 @@
 
 # don't want the test results
 tests/__pycache__/*
+
+# ipynb_checkpoints
+*checkpoint.ipynb
+
+# no pycache
+*.pyc
+

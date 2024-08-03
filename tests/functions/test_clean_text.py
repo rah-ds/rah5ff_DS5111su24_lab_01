@@ -3,8 +3,8 @@ import sys
 import pytest
 
 sys.path.insert(0, os.path.abspath('src/'))
-
 from raven_tokenizer import clean_text, tokenizer
+
 
 def test_remove_punctuation():
     """
@@ -12,7 +12,8 @@ def test_remove_punctuation():
     WHEN: clean_text is run
     THEN: we shouldn't have commas or periods in the string
     """
-    sample_text = "But the Raven, sitting lonely on the placid bust, spoke only That one word, as if his soul in that one word he did outpour."
+    sample_text = ("But the Raven, sitting lonely on the placid bust, spoke only That one word, as if his soul in that "
+                   "one word he did outpour.")
     cleaned_string = clean_text(sample_text)
 
     assert "." not in cleaned_string, "the '.' character wasn't cleaned in the string"
@@ -25,42 +26,38 @@ def test_lower_string():
     WHEN: clean_text is run
     THEN: we should have the string be lowercase.
     """
-    sample_text = "But the Raven, sitting lonely on the placid bust, spoke only That one word, as if his soul in that one word he did outpour."
+    sample_text = ("But the Raven, sitting lonely on the placid bust, spoke only That one word, as if his soul in that "
+                   "one word he did outpour.")
     cleaned_string = clean_text(sample_text)
 
     assert cleaned_string.islower(), "the string isn't lowercase!"
 
 
-@pytest.mark.xfail(reason="the input can't be made into a string.")
-def test_input_cant_be_a_string():
+@pytest.mark.xfail(reason="the input isn't a string.")
+def test_input_is_not_a_string():
     """
     GIVEN: an input that isn't a string
-    WHEN: the clean_function is run
+    WHEN: the tokenizer is run
     THEN: an assertion error should stop the function
     """
-    not_string_input_ = [99999, 9.8898, [], None]
-    with pytest.raises("AssertionError"):
+    not_string_input_ = [99999, 9.8898, [], None, True, {}, 0, 0.00]
+    with pytest.raises(AssertionError):
         for should_fail in not_string_input_:
             clean_text(should_fail)
 
 
-@pytest.mark.skip(reason = "need to find some Edgar Allen Poe translations in Japanese/Chinese/Korean.")
+@pytest.mark.skip(reason="need to find some Edgar Allen Poe translations in Japanese/Chinese/Korean.")
 def test_clean_text_japanese():
     """
     GIVEN: an input text from a popular multilingual language
-    WHEN: we try and use our clean text function
+    WHEN: we try and use our function
     THEN: we can expect the same functionality as if it was done in English / French
     """
 
     # use nltk - has functionality to check for chinese/japanese/korean characters
     # nltk.tokenize.util.is_cjk
-    # python port of Moses tokenizer An object that enumerates
+    # python port of Moses tokenizer, An object that enumerates
     # the code points of the CJK characters as listed on
-    # https: // en.wikipedia.org / wiki / Basic_Multilingual_Plane  # Basic_Multilingual_Plane
+    # https://en.wikipedia.org/wiki/Basic_Multilingual_Plane # Basic_Multilingual_Plane
 
     # assert clean_text(cjk_text) == clean_text(text_english_french)
-
-
-
-
-

@@ -24,9 +24,9 @@ raven_counts:
 	cat works/raven.txt | grep -E "raven|Raven" | wc -w
 
 #get the other files
-get_rest_of_texts:
+get_rest_of_texts: works/raven.txt
 	#already ran chmod 777, couldn't figure out bash script
-	python download_other_books.py
+	python3 scripts/download_other_books.py
 
 #Total all files -- including the raven -- line counts
 total_lines works/:

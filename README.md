@@ -1,4 +1,15 @@
-### Lab 1 Makefiles, Linux, Bash
+## Lab 1 
+
+<!-- TOC -->
+  * [Lab 1](#lab-1-)
+    * [Week 1 - Makefiles, Linux, Bash](#week-1---makefiles-linux-bash)
+        * [The 10 works we run are:](#the-10-works-we-run-are)
+    * [Week 3—Defining Functions](#week-3defining-functions)
+    * [Week 4 - Testing Functions](#week-4---testing-functions)
+<!-- TOC -->
+
+
+### Week 1—Makefiles, Linux, Bash
 
 This lab uses project [Gutenburg](https://www.gutenberg.org/ebooks/1065)
 to load and analyze books/works that no longer have Copyrights. 
@@ -40,25 +51,30 @@ the argument calls to `make` are
 * `total_words`
 * `clean_up`
 
-# Lab 1 - Week 3
+### Week 3—Defining Functions
+
   * `clean_text` - should take a string, and should return all lowercase words, and throw out any punctuation
   * `tokenize` - should take a string and return a python list, where each item is a word in the file
   * `count_words` - should take a string and return a dictionary with the words as keys, and their counts as value
 
-# Lab  Test Functions
+### Week 4—Testing Functions
 
-Tests are written using a
-* Given
-* When
-* Then
-framework
+Tests are written using a Gherkin (Given/When/Then) Scenario Framework
+
+* Given (a setup - data and preconditions)
+* When (an action or scenario happens)
+* Then (a result or outcome)
+
 
 we are going to limit what can change here
 files under consideration:
 
-> line count - name
-* 17192 - `The Raven`
-* 932 - `Fall of the House of Usher`
-* 1063 - `Cask of Amontillado`
-* 10031 - `The Poems`
-* 14082 - `And Le Corbeau`
+
+| Book Title                 | Project Gutenberg ID |
+|----------------------------|----------------------|
+| The Raven                  | 17192                |
+| Fall of the House of Usher | 932                  |
+| Cask of Amontillado        | 1063                 |
+| The Poems                  | 10031                |
+| And Le Corbeau             | 14082                |
+

@@ -27,12 +27,12 @@ def test_python_version():
     """
     GIVEN: a test suite
     WHEN: this library is committed
-    THEN: make sure the Python Version is 3
+    THEN: make sure the Python Version is 3.6+
 
     only Python 3 is currently actively supported.
     """
-    assert sys.version_info.major == 3, \
-        f"only Python 3 is supported! currently calling {sys.version}"
+    assert ((sys.version_info.major == 3) and (sys.version_info.minor > 6)), \
+        f"only Python 3.6+ is supported! currently calling {sys.version}"
 
 
 @pytest.mark.skip(reason="need to find some Edgar Allan Poe translations in"

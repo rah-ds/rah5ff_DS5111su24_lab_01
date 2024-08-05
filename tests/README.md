@@ -20,12 +20,16 @@ pytest -vvvx -m "not integration"
 ## Structure
 
 ```bash
+tests
 ├── README.md
-├── functions
-│   ├── test_clean_text.py
-│   ├── test_count_words.py
-│   └── test_tokenizer.py
-└── test_utils.py
+├── test_compatibility.py
+├── test_integration.py
+└── tokenizer # package
+    ├── books_as_strings.json # fixture
+    ├── test_clean_text.py
+    ├── test_count_words.py
+    └── test_tokenizer.py
+
 ```
 
 ### Functions
@@ -45,4 +49,6 @@ pytest -vvvx -m "not integration"
   * **Sanity checks** output vs stable and expected `wc` tool
 
 #### Integration Tests
+
+ * we test both the whole tokenizer pipeline and sanity check some of the outputs 
 

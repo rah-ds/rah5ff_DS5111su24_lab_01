@@ -52,9 +52,14 @@ env:
 download_books:
 	cd scripts && python3 download_other_books.py && python3 build_test_data.py;
 
-run_tests: tests/tokenizer/books_as_strings.json
+lint:
+	pylint src/tokenizer.py
+
+run_tests: lint
 	pytest -vvx tests/
 	rm -rf tests/tokenizer/books_as_strings.json
+
+
 
 
 #default:

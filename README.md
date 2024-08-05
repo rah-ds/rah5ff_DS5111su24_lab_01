@@ -1,5 +1,5 @@
 
-![Supported Versions](https://img.shields.io/badge/supported%20python%20versions-3.7%7C3.8%7C3.9%7C3.10-blue.svg)
+![Supported Versions](https://img.shields.io/badge/python_version-3.8%7C3.9%7C3.10%7C3.11%7C3.12-blue.svg)
 [![Python package](https://github.com/rah-ds/rah5ff_DS5111su24_lab_01/actions/workflows/validations.yml/badge.svg)](https://github.com/rah-ds/rah5ff_DS5111su24_lab_01/actions/workflows/validations.yml)
 
 ## Lab 1 

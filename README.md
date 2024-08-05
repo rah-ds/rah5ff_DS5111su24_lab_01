@@ -1,3 +1,5 @@
+[![Python package](https://github.com/rah-ds/rah5ff_DS5111su24_lab_01/actions/workflows/validations.yml/badge.svg)](https://github.com/rah-ds/rah5ff_DS5111su24_lab_01/actions/workflows/validations.yml)
+
 ## Lab 1 
 [![Python package](https://github.com/rah-ds/rah5ff_DS5111su24_lab_01/actions/workflows/validations.yml/badge.svg)](https://github.com/rah-ds/rah5ff_DS5111su24_lab_01/actions/workflows/validations.yml)
 
@@ -9,15 +11,19 @@ A quick start demo can be found in `demo\demos.ipynb`
 <!-- TOC -->
   * [Lab 1](#lab-1-)
     * [Week 1—Makefiles, Linux, Bash](#week-1makefiles-linux-bash)
-        * [The 10 works we run are:](#the-10-works-we-run-are)
+        * [Initially Considered Set](#initially-considered-set)
     * [Week 3—Defining Functions](#week-3defining-functions)
     * [Week 4—Testing Functions](#week-4testing-functions)
+    * [Week 5-GitHub Actions](#week-5-github-actions)
+    * [Week 6-Installable Package](#week-6-installable-package)
+    * [Week 7-Review](#week-7-review)
+    * [Week 8-Refactoring and Linting](#week-8-refactoring-and-linting)
 <!-- TOC -->
 
 
 ### Week 1—Makefiles, Linux, Bash
 
-This lab uses project [Gutenburg](https://www.gutenberg.org/ebooks/1065)
+This lab uses project [Gutenberg](https://www.gutenberg.org/ebooks/1065)
 to load and analyze books/works that no longer have Copyrights. 
 
 Being at UVa, we naturally care about Edgar Allan Poe :).
@@ -26,7 +32,9 @@ To download and analyze some of his works, we will use a makefile, which runs on
 1) The famous `Raven` Poem
 2) On his `total` works which is the `Raven` and another 10 works selected.
 
-##### The 10 works we run are:
+##### Initially Considered Set
+
+The 10 works we run are:
 
   * [The Bells and other Poems](https://gutenberg.org/cache/epub/50852/pg50852.txt)
   * [The Cask of Amontillado](https://gutenberg.org/cache/epub/1063/pg1063.txt)
@@ -82,5 +90,18 @@ files under consideration:
 | Fall of the House of Usher | 932                  |
 | Cask of Amontillado        | 1063                 |
 | The Poems                  | 10031                |
-| And Le Corbeau             | 14082                |
+| Le Corbeau                 | 14082                |
 
+### Week 5-GitHub Actions
+* Workflow Automation: launching and automated workflow and
+adding some Integration tests
+* updated requirements.txt to be a specific version
+
+### Week 6-Installable Package
+* built out the pyproject.toml file
+* updated the Demo to include a user-friendly way to call package
+
+### Week 7-Review
+
+### Week 8-Refactoring and Linting
+* 

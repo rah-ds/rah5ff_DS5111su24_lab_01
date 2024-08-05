@@ -21,7 +21,7 @@ testing_book_ids_d = {
     "Fall_of_the_House_of_Usher": 932,
     "Cask_of_Amontillado": 1063,
     "The_Poems": 10031,
-    "And_Le_Corbeau": 14082
+    "Le_Corbeau": 14082
 }
 
 
@@ -32,9 +32,9 @@ testing_book_ids_d = {
 #     os.system(
 #         f'wget -O "works/{book_name}_{book_id}.txt" "https://www.gutenberg.org/cache/epub/{book_id}/pg{book_id}.txt"')
 
-os.system(f"mkdir -p works/testing_texts/")
+os.system(f"mkdir -p ..//data/raw/")
 
 for book_name, book_id in testing_book_ids_d.items():
     print(f"running {book_name} - {book_id}")
     os.system(
-        f'wget -O "works/testing_texts/{book_name}_{book_id}.txt" "https://www.gutenberg.org/cache/epub/{book_id}/pg{book_id}.txt"')
+        f'wget -O "..//data/raw/{book_name}_{book_id}.txt" "https://www.gutenberg.org/cache/epub/{book_id}/pg{book_id}.txt"')

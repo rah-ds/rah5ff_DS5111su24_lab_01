@@ -1,6 +1,0 @@
-************* Module /Users/ryan.healy/Desktop/DS_MSDS/Data_Engineering/Labs/L_1/rah5ff_DS5111su24_lab_01/pylintrc
-pylintrc:1:0: F0011: error while parsing the configuration: While reading from '/Users/ryan.healy/Desktop/DS_MSDS/Data_Engineering/Labs/L_1/rah5ff_DS5111su24_lab_01/pylintrc' [line 645]: section 'MAIN' already exists (config-parse-error)
-
---------------------------------------------------------------------
-Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
-

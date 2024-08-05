@@ -13,8 +13,9 @@ update: env
 lint:
 	pylint src/tokenizer.py
 
-tests: lint
-	pytest -vvx tests/
+tests: lint # only non integration tests
+	pytest -vvx tests/ -m "not integration"
+
 
 #all: download_books, env, update, lint, tests
 

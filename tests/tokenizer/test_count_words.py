@@ -1,4 +1,6 @@
 import os
+import subprocess
+
 import pytest
 import sys
 import json
@@ -49,8 +51,7 @@ def test_no_extra_words(data_key: str):
     assert "Raven" not in count_dict, "we shouldn't see an upper case character in this in output"
 
 
-
-def test_wc_vs_counter(raven_poem:str = test_data["The_Raven_Text"]):
+def test_wc_vs_counter(raven_poem: str = test_data["The_Raven_Text"]):
     """
     GIVEN: our tokenizer
     WHEN: we compare the count vs. word counter
@@ -64,4 +65,5 @@ def test_wc_vs_counter(raven_poem:str = test_data["The_Raven_Text"]):
     counter_output = count_words(raven_poem)
     total_words = sum(counter_output.values())
 
-    assert total_words > 100231, f"total words {total_words}  should be greater than counter as we clean text"
+    assert total_words > 10231, f"total words {total_words}  -- wc is 10,231"
+

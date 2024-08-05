@@ -26,6 +26,9 @@ jobs:
       - name: Run Pylint
         run: |
           make lint
-      - name: Test with pytest
+      - name: Test Non Integration Tests
         run: |
-          pytest -vvx tests/
+          make tests
+      - name: Test Integration Tests
+        run: |
+          pytest -vvx tests/ -m integration

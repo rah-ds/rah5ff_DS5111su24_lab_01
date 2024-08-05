@@ -12,7 +12,7 @@ pytest -vvx tests
 
 # specify integration or not
 pytest -vvx -m integration
-pytest -vvvx -m "not integration"
+pytest -vvx -m "not integration"
 ```
 
 ## Data Coverage

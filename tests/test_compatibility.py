@@ -67,3 +67,5 @@ def test_wc_vs_counter():
     # os.sys(f"echo ${sample_text} | wc -w")
     # echo
     # "$tfile " | wc - w
+
+Update the version of python used for the test, and add a pytest that will fail if another version is used

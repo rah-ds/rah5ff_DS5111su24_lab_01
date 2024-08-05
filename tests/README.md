@@ -2,11 +2,15 @@
 
 This project uses `pytest` for its parametrization, active community, and clear assertions.
 
+
+
 ## How to Run
 
 ```bash
-#from project root
-#python3 pytest tests --verbose
+#from project root - all
+pytest -vvx tests
+
+# specify integration or not
 pytest -vvx -m integration
 pytest -vvvx -m "not integration"
 ```

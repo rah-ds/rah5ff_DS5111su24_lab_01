@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ["3.9", "3.10", "3.11"]
+        python-version: ["3.8", "3.9", "3.10", "3.11", "3.12"]
 
     steps:
       - uses: actions/checkout@v4
@@ -20,11 +20,15 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - name: Install dependencies
         run: |
-          pip install pytest pylint
+          make env
+          make update
           make download_books
       - name: Run Pylint
         run: |
           make lint
-      - name: Test with pytest
+      - name: Test Non Integration Tests
         run: |
-          pytest -vvx tests/
+          make tests
+      - name: Test Integration Tests
+        run: |
+          pytest -vvx tests/ -m integration

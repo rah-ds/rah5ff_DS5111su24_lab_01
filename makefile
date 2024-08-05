@@ -48,3 +48,9 @@ venv:
 	pip install --upgrade pip
 	source env/bin/activate; pip install -r requirements.txt
 
+setup_tests:
+	cd scripts && python3 build_test_data.py;
+
+run_tests: tests/tokenizer/books_as_strings.json
+	pytest -v tests/
+	rm -rf tests/tokenizer/books_as_strings.json

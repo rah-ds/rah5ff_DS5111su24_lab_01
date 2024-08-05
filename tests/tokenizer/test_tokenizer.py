@@ -1,10 +1,13 @@
 import os
 import sys
 import pytest
+import json
 
 sys.path.insert(0, os.path.abspath('src/'))
 
 from tokenizer import clean_text, tokenizer, count_words
+
+test_data = json.load(open("tests/tokenizer/books_as_strings.json"))
 
 
 def test_tokenizer_output_is_list():
@@ -55,18 +58,14 @@ def test_input_cant_be_a_string():
             clean_text(should_fail)
 
 
+@pytest.mark.parametrize("data_key", ["The_Raven_Text", "English_Poe_Text", "French_Poe_Text"])
+def test_tokenizer_output_is_list_on_books(data_key: str):
+    """
+    GIVEN: the tokenizer function
+    WHEN: we run the tokenizer
+    THEN: the return data should be a list
+    """
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+    tokenizer_output_ = tokenizer(test_data[data_key])
+    assert isinstance(tokenizer_output_, list), "the tokenizer output isn't a list."
 

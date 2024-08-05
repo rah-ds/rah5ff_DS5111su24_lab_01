@@ -32,9 +32,9 @@ python3 pytest tests --verbose
 * `test_count_words` - counts the words in a string.
 * `test_tokenizer` - takes a string and returns a list.
 
-### Misc Tests
+### Other Tests
 
-#### utils
+#### Platform
   * **test os** - only Mac, Windows, and Ubuntu supported
   
   * **python version** - only Python 3 supported
@@ -43,5 +43,5 @@ python3 pytest tests --verbose
   
   * **Sanity checks** output vs stable and expected `wc` tool
 
-### Integration Tests
+#### Integration Tests
 

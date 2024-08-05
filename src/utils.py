@@ -12,3 +12,4 @@ def converts_book_to_string(book_path: str) -> str:
     txt = txt.replace('\ufeff', '')
 
     return txt
+

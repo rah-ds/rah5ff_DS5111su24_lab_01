@@ -1,7 +1,7 @@
 [![Python package](https://github.com/rah-ds/rah5ff_DS5111su24_lab_01/actions/workflows/validations.yml/badge.svg)](https://github.com/rah-ds/rah5ff_DS5111su24_lab_01/actions/workflows/validations.yml)
 
+
 ## Lab 1 
-[![Python package](https://github.com/rah-ds/rah5ff_DS5111su24_lab_01/actions/workflows/validations.yml/badge.svg)](https://github.com/rah-ds/rah5ff_DS5111su24_lab_01/actions/workflows/validations.yml)
 
 Developing a well-tested and robust tokenizer library. 
 

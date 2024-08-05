@@ -8,6 +8,8 @@ Developing a well-tested and robust tokenizer library.
 
 A quick start demo can be found in `demo\demos.ipynb`
 
+To learn how the tests are run check out the [tests/readme](tests/README.md)
+
 <details open> 
 <summary> Development Process </summary>
 
@@ -60,9 +62,9 @@ The make file is self documenting and calling
 ```shell
 make 
 ```
-will echo the make file.
+will echo the make file and show everything available.
 
-the argument calls to `make` to explore texts are 
+some argument calls to `make` to explore the texts could be
 * `get_raven_data`
   * `raven_line_count`
   * `raven_word_count`
@@ -71,7 +73,9 @@ the argument calls to `make` to explore texts are
   * `total_lines`
   * `total_words`
 
-    
+uncomment them in the file first the rest of the calls will be focused on building the pipeline.
+ 
+   
 ### Week 3—Defining Functions
 
   * `clean_text` - should take a string, and should return all lowercase words, and throw out any punctuation
@@ -109,6 +113,7 @@ adding some Integration tests
 * updated the Demo to include a user-friendly way to call package
 
 ### Week 7-Review
+* review - focused on what we learned and writing some more tests
 
 ### Week 8-Refactoring and Linting
 * refactored until there was an acceptable score (10/10) in Pylint

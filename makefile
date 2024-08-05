@@ -49,7 +49,7 @@ env:
 #	source env/bin/activate;
 	pip install -r requirements.txt
 
-setup_tests:
+download_books:
 	cd scripts && python3 download_other_books.py && python3 build_test_data.py;
 
 run_tests: tests/tokenizer/books_as_strings.json

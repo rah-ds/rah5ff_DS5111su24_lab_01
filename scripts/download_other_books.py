@@ -32,9 +32,9 @@ testing_book_ids_d = {
 #     os.system(
 #         f'wget -O "works/{book_name}_{book_id}.txt" "https://www.gutenberg.org/cache/epub/{book_id}/pg{book_id}.txt"')
 
-os.system(f"mkdir -p data/raw/")
+os.system(f"mkdir -p ..//data/raw/")
 
 for book_name, book_id in testing_book_ids_d.items():
     print(f"running {book_name} - {book_id}")
     os.system(
-        f'wget -O "data/raw/{book_name}_{book_id}.txt" "https://www.gutenberg.org/cache/epub/{book_id}/pg{book_id}.txt"')
+        f'wget -O "..//data/raw/{book_name}_{book_id}.txt" "https://www.gutenberg.org/cache/epub/{book_id}/pg{book_id}.txt"')

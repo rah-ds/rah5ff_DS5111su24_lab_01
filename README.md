@@ -1,3 +1,5 @@
+
+![Supported Versions](https://img.shields.io/badge/supported%20python%20versions-3.7%7C3.8%7C3.9%7C3.10-blue.svg)
 [![Python package](https://github.com/rah-ds/rah5ff_DS5111su24_lab_01/actions/workflows/validations.yml/badge.svg)](https://github.com/rah-ds/rah5ff_DS5111su24_lab_01/actions/workflows/validations.yml)
 
 ## Lab 1 
@@ -6,6 +8,8 @@ Developing a well-tested and robust tokenizer library.
 
 A quick start demo can be found in `demo\demos.ipynb`
 
+<details open> 
+<summary> Development Process </summary>
 
 <!-- TOC -->
   * [Lab 1](#lab-1-)
@@ -108,3 +112,5 @@ adding some Integration tests
 
 ### Week 8-Refactoring and Linting
 * refactored until there was an acceptable score (10/10) in Pylint
+</details>
+

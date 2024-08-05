@@ -6,8 +6,9 @@ This project uses `pytest` for its parametrization, active community, and clear 
 
 ```bash
 #from project root
-python3 pytest tests --verbose
-
+#python3 pytest tests --verbose
+pytest -vvx -m integration
+pytest -vvvx -m "not integration"
 ```
 
 ## Data Coverage

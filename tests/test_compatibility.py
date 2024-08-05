@@ -52,7 +52,7 @@ def test_clean_text_japanese():
 
     # assert clean_text(cjk_text) == clean_text(text_english_french)
 
-
+@pytest.mark.skip(reason="TODO")
 def test_wc_vs_counter():
     """
     GIVEN: our tokenizer

@@ -21,7 +21,8 @@ jobs:
       - name: Install dependencies
         run: |
           make env
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          make setup_tests
+          # if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
       - name: Test with pytest
         run: |
           pytest -vvx tests/

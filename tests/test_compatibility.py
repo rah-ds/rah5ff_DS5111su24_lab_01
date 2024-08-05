@@ -3,8 +3,8 @@ import pytest
 import platform
 import sys
 
-
 sys.path.insert(0, os.path.abspath('src/'))
+
 
 # from tokenizer import clean_text, tokenizer, count_words
 
@@ -52,20 +52,10 @@ def test_clean_text_japanese():
 
     # assert clean_text(cjk_text) == clean_text(text_english_french)
 
-@pytest.mark.skip(reason="TODO")
-def test_wc_vs_counter():
-    """
-    GIVEN: our tokenizer
-    WHEN: we compare it vs. word counter
-    THEN: are the two giving the same answer.
 
-    wc has a lot of support, and our tokenizer should
-    give the same answer as this benchmark.
-    """
-    # with tempfile.NamedTemporaryFile()
-    # subprocess.check_output(["wc" "-w", "file"])
-    # os.sys(f"echo ${sample_text} | wc -w")
-    # echo
-    # "$tfile " | wc - w
+def test_pytest_version():
+    """GIVEN: a call to pytest and build
+       WHEN: we run pytest
+       THEN: check if the version is the one in the requirements.txt"""
 
-Update the version of python used for the test, and add a pytest that will fail if another version is used
+    assert pytest.__version__ == '8.3.2', f"pytest {pytest.__version__}  -- expected 8.3.2"

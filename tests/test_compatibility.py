@@ -3,8 +3,8 @@ import pytest
 import platform
 import sys
 
-
 sys.path.insert(0, os.path.abspath('src/'))
+
 
 # from tokenizer import clean_text, tokenizer, count_words
 
@@ -17,7 +17,7 @@ def test_platform_compatibility():
 
     currently only Windows, Ubuntu, and Mac are supported.
     """
-    supported_os_ = ["Windows", "Darwin", "Ubuntu"]
+    supported_os_ = ["Windows", "Darwin", "Ubuntu", "Linux"]
     current_os = platform.system()
 
     assert current_os in supported_os_, f"given os {current_os} only {supported_os_} supported"
@@ -27,12 +27,12 @@ def test_python_version():
     """
     GIVEN: a test suite
     WHEN: this library is committed
-    THEN: make sure the Python Version is 3
+    THEN: make sure the Python Version is 3.6+
 
     only Python 3 is currently actively supported.
     """
-    assert sys.version_info.major == 3, \
-        f"only Python 3 is supported! currently calling {sys.version}"
+    assert ((sys.version_info.major == 3) and (sys.version_info.minor > 6)), \
+        f"only Python 3.6+ is supported! currently calling {sys.version}"
 
 
 @pytest.mark.skip(reason="need to find some Edgar Allan Poe translations in"
@@ -53,17 +53,9 @@ def test_clean_text_japanese():
     # assert clean_text(cjk_text) == clean_text(text_english_french)
 
 
-def test_wc_vs_counter():
-    """
-    GIVEN: our tokenizer
-    WHEN: we compare it vs. word counter
-    THEN: are the two giving the same answer.
+def test_pytest_version():
+    """GIVEN: a call to pytest and build
+       WHEN: we run pytest
+       THEN: check if the version is the one in the requirements.txt"""
 
-    wc has a lot of support, and our tokenizer should
-    give the same answer as this benchmark.
-    """
-    # with tempfile.NamedTemporaryFile()
-    # subprocess.check_output(["wc" "-w", "file"])
-    # os.sys(f"echo ${sample_text} | wc -w")
-    # echo
-    # "$tfile " | wc - w
+    assert pytest.__version__ == '8.3.2', f"pytest {pytest.__version__}  -- expected 8.3.2"

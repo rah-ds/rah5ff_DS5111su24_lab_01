@@ -2,12 +2,17 @@
 
 This project uses `pytest` for its parametrization, active community, and clear assertions.
 
+
+
 ## How to Run
 
 ```bash
-#from project root
-python3 pytest tests --verbose
+#from project root - all
+pytest -vvx tests
 
+# specify integration or not
+pytest -vvx -m integration
+pytest -vvx -m "not integration"
 ```
 
 ## Data Coverage
@@ -19,12 +24,16 @@ python3 pytest tests --verbose
 ## Structure
 
 ```bash
+tests
 ├── README.md
-├── functions
-│   ├── test_clean_text.py
-│   ├── test_count_words.py
-│   └── test_tokenizer.py
-└── test_utils.py
+├── test_compatibility.py
+├── test_integration.py
+└── tokenizer # package
+    ├── books_as_strings.json # fixture
+    ├── test_clean_text.py
+    ├── test_count_words.py
+    └── test_tokenizer.py
+
 ```
 
 ### Functions
@@ -44,4 +53,6 @@ python3 pytest tests --verbose
   * **Sanity checks** output vs stable and expected `wc` tool
 
 #### Integration Tests
+
+ * we test both the whole tokenizer pipeline and sanity check some of the outputs 
 

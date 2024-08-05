@@ -1,4 +1,6 @@
 import os
+import subprocess
+
 import pytest
 import sys
 import json
@@ -47,3 +49,21 @@ def test_no_extra_words(data_key: str):
     count_dict = count_words(test_data[data_key])
 
     assert "Raven" not in count_dict, "we shouldn't see an upper case character in this in output"
+
+
+def test_wc_vs_counter(raven_poem: str = test_data["The_Raven_Text"]):
+    """
+    GIVEN: our tokenizer
+    WHEN: we compare the count vs. word counter
+    THEN: are the two giving the same answer.
+
+    wc has a lot of support, and our tokenizer should
+    give the same answer as this benchmark.
+    """
+
+    # from word counter for the Raven - 10,231 words
+    counter_output = count_words(raven_poem)
+    total_words = sum(counter_output.values())
+
+    assert total_words > 10231, f"total words {total_words}  -- wc is 10,231"
+

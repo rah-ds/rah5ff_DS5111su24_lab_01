@@ -20,7 +20,8 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - name: Install dependencies
         run: |
-          pip install pytest pylint
+          make env
+          make update
           make download_books
       - name: Run Pylint
         run: |

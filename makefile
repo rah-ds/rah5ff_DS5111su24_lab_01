@@ -42,7 +42,7 @@ clean_up:
 	rm -rf works/
 
 #tear down if exists; rebuild env
-venv:
+env:
 	rm -rf env
 	python3 -m venv env
 	pip install --upgrade pip

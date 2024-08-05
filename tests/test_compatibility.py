@@ -17,7 +17,7 @@ def test_platform_compatibility():
 
     currently only Windows, Ubuntu, and Mac are supported.
     """
-    supported_os_ = ["Windows", "Darwin", "Ubuntu"]
+    supported_os_ = ["Windows", "Darwin", "Ubuntu", "Linux"]
     current_os = platform.system()
 
     assert current_os in supported_os_, f"given os {current_os} only {supported_os_} supported"

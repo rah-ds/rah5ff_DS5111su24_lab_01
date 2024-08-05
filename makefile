@@ -11,7 +11,7 @@ env:
 update: env
 	source env/bin/activate; pip install -r requirements.txt
 
-lint: env, download_books
+lint: update, download_books
 	pylint src/tokenizer.py
 
 tests: lint, download_books

@@ -52,5 +52,5 @@ setup_tests:
 	cd scripts && python3 build_test_data.py;
 
 run_tests: tests/tokenizer/books_as_strings.json
-	pytest -v tests/
+	pytest -vvx tests/
 	rm -rf tests/tokenizer/books_as_strings.json

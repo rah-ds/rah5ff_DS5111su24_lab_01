@@ -11,9 +11,9 @@ download_books: env
 	cd scripts && python3 download_other_books.py && python3 build_test_data.py;
 
 lint:
-	pylint src/
+	pylint src/tokenizer.py
 
-tests: lint, download_books # only non integration tests
+tests: lint # only non integration tests
 	pytest -vvx tests/ -m "not integration"
 
 

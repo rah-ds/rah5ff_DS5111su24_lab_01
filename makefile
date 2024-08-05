@@ -11,7 +11,7 @@ update: env
 	source env/bin/activate; pip install -r requirements.txt
 
 lint:
-	pylint --generate-rcfile >> pylintrc; pylint src/tokenizer.py | pylint_out.txt
+	pylint --generate-rcfile >> pylintrc; pylint src/ > pylint_out.txt
 
 tests: lint # only non integration tests
 	pytest -vvx tests/ -m "not integration"

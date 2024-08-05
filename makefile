@@ -17,8 +17,6 @@ tests: lint # only non integration tests
 	pytest -vvx tests/ -m "not integration"
 
 
-#all: download_books, env, update, lint, tests
-
 clean_up: download_books
 	rm -rf tests/tokenizer/books_as_strings.json
 	rm -rf data

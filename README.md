@@ -110,7 +110,7 @@ adding some Integration tests
 * updated requirements.txt to be a specific version
 
 ### Week 6-Installable Package
-* built out the pyproject.toml file
+* built out the pyproject.toml file, could've also used a setup.py file
 * updated the Demo to include a user-friendly way to call package
 
 ### Week 7-Review

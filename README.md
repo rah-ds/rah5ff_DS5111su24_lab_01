@@ -2,6 +2,7 @@
 ![Supported Versions](https://img.shields.io/badge/python_version-3.8%7C3.9%7C3.10%7C3.11%7C3.12-blue.svg)
 [![Python package](https://github.com/rah-ds/rah5ff_DS5111su24_lab_01/actions/workflows/validations.yml/badge.svg)](https://github.com/rah-ds/rah5ff_DS5111su24_lab_01/actions/workflows/validations.yml)
 
+
 ## Lab 1 
 
 Developing a well-tested and robust tokenizer library. 
@@ -118,4 +119,3 @@ adding some Integration tests
 ### Week 8-Refactoring and Linting
 * refactored until there was an acceptable score (10/10) in Pylint
 </details>
-

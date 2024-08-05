@@ -43,10 +43,10 @@ default:
 
 #tear down if exists; rebuild env
 env:
-#	rm -rf env
-#	python3 -m venv env
-#	pip install --upgrade pip
-#	source env/bin/activate;
+	rm -rf env
+	python3 -m venv env
+	pip install --upgrade pip
+	source env/bin/activate;
 	pip install -r requirements.txt
 
 download_books:
@@ -55,3 +55,16 @@ download_books:
 run_tests: tests/tokenizer/books_as_strings.json
 	pytest -vvx tests/
 	rm -rf tests/tokenizer/books_as_strings.json
+
+
+#default:
+#	@cat makefile
+#
+#env:
+#	python3 -m venv env; . env/bin/activate ; pip install --upgrade pip
+#
+#update: env
+#	. env/bin/activate; pip install -r requirements.txt
+#
+#test:
+#	. env/bin/activate; pytest -vvx tests

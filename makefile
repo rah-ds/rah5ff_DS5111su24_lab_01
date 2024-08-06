@@ -7,22 +7,34 @@ env:
 update: env
 	source env/bin/activate; pip install -r requirements.txt
 
-download_books: env
+download_books:
 	cd scripts && python3 download_other_books.py && python3 build_test_data.py;
 
+.PHONY: lint
 lint:
 	pylint src/tokenizer.py
 
-tests: lint # only non integration tests
-	pytest -vvx tests/ -m "not integration"
+.PHONY: tests
+tests: update # only non integration tests
+	source env/bin/activate; pytest -vvx tests/ -m "not integration"
 
-
-#all: download_books, env, update, lint, tests
-
-clean_up: download_books
+.PHONY: clean_up
+clean_up:
 	rm -rf tests/tokenizer/books_as_strings.json
 	rm -rf data
 
+.PHONY: all
+make all:
+	make env
+	make update
+	make download_books
+	make lint
+	make tests
+	make clean_up
+
+.PHONY: install_from_github
+make install_from_github: env
+	 pip install git+https://github.com/rah-ds/rah5ff_DS5111su24_lab_01.git
 
 ##########################
 ####################################

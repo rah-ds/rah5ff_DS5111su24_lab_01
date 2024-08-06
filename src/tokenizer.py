@@ -8,6 +8,18 @@ is the start of a rudimentary Text Analytics pipeline.
 from collections import Counter
 import string
 import sys
+import logging
+
+if __name__ == '__main__':
+    if len(sys.argv) < 2:
+        print('Please provide logging file name as argument')
+        sys.exit(1)
+
+    logging_file = sys.argv[1]
+    logging.basicConfig(level=logging.INFO, filename=logging_file,
+                        format='%(asctime)s %(name)s %(levelname)s: %(message)s')
+
+log = logging.getLogger(__name__)
 
 
 def clean_text(txt: str) -> str:

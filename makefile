@@ -1,14 +1,14 @@
 default:
 	@cat makefile
 
-download_books:
-	cd scripts && python3 download_other_books.py && python3 build_test_data.py;
-
 env:
 	python3 -m venv env; source env/bin/activate ; pip install --upgrade pip
 
 update: env
 	source env/bin/activate; pip install -r requirements.txt
+
+download_books: env
+	cd scripts && python3 download_other_books.py && python3 build_test_data.py;
 
 lint:
 	pylint src/tokenizer.py

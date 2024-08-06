@@ -7,12 +7,14 @@ pytest suite.
 """
 
 import os
+import json
 import sys
+
 
 os.chdir("..")  # stored in scripts needs to be run in root
 sys.path.insert(0, os.path.abspath('src/'))
 from utils import converts_book_to_string
-import json
+
 
 test_d = {"The_Raven_Text": converts_book_to_string("data/raw/The_Raven_17192.txt"), "English_Poe_Text": ",".join(
     [converts_book_to_string((os.path.join("data/raw", file))) for file in [

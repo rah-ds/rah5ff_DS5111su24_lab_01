@@ -11,6 +11,12 @@ A quick start demo can be found in `demo\demos.ipynb`
 
 To learn how the tests are run check out the [tests/readme](tests/README.md)
 
+to install the package
+
+```bash
+ pip install git+https://github.com/rah-ds/rah5ff_DS5111su24_lab_01.git
+```
+
 <details open> 
 <summary> Development Process </summary>
 

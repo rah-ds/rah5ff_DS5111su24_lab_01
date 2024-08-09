@@ -15,6 +15,9 @@ to install the package
 
 ```bash
  pip install git+https://github.com/rah-ds/rah5ff_DS5111su24_lab_01.git
+
+# run with make
+make install_from_github
 ```
 
 <details open> 
